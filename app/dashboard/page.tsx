@@ -2,6 +2,8 @@ import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 import { cookies } from 'next/headers';
 import DashboardCards from '@/components/ui/dashboard/cards';
 import Greeting from '@/components/ui/dashboard/greeting';
+import PortfolioChart from '@/components/ui/dashboard/portfolio-chart';
+import PortfolioHoldings from '@/components/ui/dashboard/portfolio-holdings';
 
 async function getUser() {
   const supabase = createServerComponentClient({ cookies });
@@ -23,8 +25,16 @@ export default async function Page() {
         <Greeting name={name} />
       </div>
       <div className="space-y-4 mt-8">
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          <DashboardCards />
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
+          <div className="lg:col-span-4 grid grid-cols-1 gap-4">
+            <DashboardCards />
+          </div>
+          <div className="lg:col-span-8">
+            <PortfolioChart />
+          </div>
+        </div>
+        <div className="grid gap-4">
+          <PortfolioHoldings />
         </div>
       </div>
     </main>

@@ -28,7 +28,7 @@ export default function Page() {
               width={350}
               height={266}
               priority
-              className="hidden md:block w-full h-auto"
+              className="hidden md:block w-auto h-auto"
               alt="Bull"
             />
           </div>

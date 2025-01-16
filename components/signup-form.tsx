@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/auth-forms/button"
 import { Card, CardContent } from "@/components/ui/auth-forms/card"
-import { Input } from "@/components/ui/auth-forms/input"
+import Input from "@/components/ui/auth-forms/input"
 import { Label } from "@/components/ui/auth-forms/label"
 import { useAuth } from "@/hooks/useAuth"
 import { useState } from "react"
